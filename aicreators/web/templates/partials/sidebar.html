@@ -1,0 +1,18 @@
+{# SPDX-License-Identifier: MIT #}
+<aside class="sidebar" id="sidebar" aria-label="Primary">
+  <a class="sidebar-brand" href="{{ url_for('pages.overview') }}">AICreators</a>
+
+  <nav class="sidebar-nav">
+    <a href="{{ url_for('pages.overview') }}" class="{% if active == 'overview' %}is-active{% endif %}">Overview</a>
+    <a href="{{ url_for('pages.analyze') }}" class="{% if active == 'analyze' %}is-active{% endif %}">Analyze</a>
+    <a href="{{ url_for('pages.ideas') }}" class="{% if active == 'ideas' %}is-active{% endif %}">Ideas</a>
+    <a href="{{ url_for('pages.scripts') }}" class="{% if active == 'scripts' %}is-active{% endif %}">Scripts</a>
+    <a href="{{ url_for('pages.storyboard') }}" class="{% if active == 'storyboard' %}is-active{% endif %}">Storyboard</a>
+    <a href="{{ url_for('pages.voice') }}" class="{% if active == 'voice' %}is-active{% endif %}">Voice</a>
+    <a href="{{ url_for('pages.jobs') }}" class="{% if active == 'jobs' %}is-active{% endif %}">Jobs</a>
+  </nav>
+
+  <div class="sidebar-foot">
+    <a href="{{ url_for('pages.settings') }}" class="{% if active == 'settings' %}is-active{% endif %}">Settings</a>
+  </div>
+</aside>

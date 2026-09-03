@@ -43,6 +43,10 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["aicreators"]
 
+[tool.hatch.build.targets.wheel.force-include]
+"aicreators/web/templates" = "aicreators/web/templates"
+"aicreators/web/static" = "aicreators/web/static"
+
 [tool.ruff]
 exclude = [
     ".eggs",

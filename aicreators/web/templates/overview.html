@@ -1,0 +1,33 @@
+{# SPDX-License-Identifier: MIT #}
+{% extends "base.html" %}
+
+{% block main %}
+<section class="stack">
+  <p class="lede">Local-first pipeline for short-form content. Start with a channel analysis, then move through ideas, script, visuals, and voice.</p>
+
+  <div class="panel">
+    <h2 class="panel-title">Pipeline</h2>
+    <ol class="pipeline">
+      <li><a href="{{ url_for('pages.analyze') }}">Analyze</a></li>
+      <li><a href="{{ url_for('pages.ideas') }}">Ideas</a></li>
+      <li><a href="{{ url_for('pages.scripts') }}">Scripts</a></li>
+      <li><a href="{{ url_for('pages.storyboard') }}">Storyboard</a></li>
+      <li><a href="{{ url_for('pages.voice') }}">Voice</a></li>
+    </ol>
+  </div>
+
+  <div class="panel-grid">
+    <div class="panel">
+      <h2 class="panel-title">Recent jobs</h2>
+      <p class="empty">No jobs yet. Run an analysis to get started.</p>
+    </div>
+    <div class="panel">
+      <h2 class="panel-title">System</h2>
+      <ul class="meta-list">
+        <li><span>API health</span><span id="overview-health">Checking…</span></li>
+        <li><span>Ollama</span><span class="muted">Not configured</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}

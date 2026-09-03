@@ -1,0 +1,33 @@
+{# SPDX-License-Identifier: MIT #}
+{% extends "base.html" %}
+
+{% block main %}
+<section class="stack">
+  <p class="lede">Pull top videos from a channel or playlist. Results will feed idea generation next.</p>
+
+  <form id="analyze-form" class="panel stack" action="#" method="post">
+    <label class="field">
+      <span class="field-label">Channel or playlist URL</span>
+      <div class="cta-row">
+        <input id="channel-url" name="url" type="url" required placeholder="https://youtube.com/@channel">
+        <button type="submit">Analyze</button>
+      </div>
+    </label>
+  </form>
+
+  <div class="panel" id="analyze-results">
+    <h2 class="panel-title">Results</h2>
+    <p class="empty" id="analyze-empty">No analysis yet. Paste a URL and run Analyze.</p>
+    <ul class="video-list" id="video-list" hidden></ul>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.getElementById("analyze-form")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    // Wired to POST /api/analyze in a later step.
+  });
+</script>
+{% endblock %}

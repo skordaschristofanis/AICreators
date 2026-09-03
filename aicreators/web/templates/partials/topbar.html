@@ -1,0 +1,10 @@
+{# SPDX-License-Identifier: MIT #}
+<header class="topbar">
+  <div class="topbar-start">
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+    </button>
+    <h1>{{ page_title or "AICreators" }}</h1>
+  </div>
+  <p class="status-pill" id="health-status" data-health-url="{{ url_for('health') }}">Checking…</p>
+</header>
