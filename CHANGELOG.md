@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-09-02
+
+### Added
+- Flask web app factory with a `/health` endpoint
+- CLI via argparse, including a `serve` subcommand to start the development server
+  (`uv run aicreators serve --dev --port 5001`)
+
 ## [0.1.0] - 2026-09-02
 
 ### Added

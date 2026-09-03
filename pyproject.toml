@@ -2,7 +2,7 @@
 
 [project]
 name = "aicreators"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
     {name = "Christofanis Skordas", email = "skordasc@uchicago.edu"}
 ]
@@ -21,7 +21,9 @@ classifiers = [
     "Programming Language :: Python :: 3.14"
 ]
 requires-python = "==3.14.*"
-dependencies = []
+dependencies = [
+    "flask>=3.1.3",
+]
 
 [dependency-groups]
 dev = []
